@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cg0t2h6jt1iig"]
+
+[ext_resource type="Script" uid="uid://dqn07sv15am8b" path="res://front_button.gd" id="1_4h38q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6dyv"]
+
+[node name="FrontButton" type="Button" unique_id=1553548635]
+custom_minimum_size = Vector2(300, 300)
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Customer_Prompt_Box")
+focus_neighbor_top = NodePath("../../Top_Hbox/ChatBot_Button")
+focus_neighbor_right = NodePath("../Customer_Prompt_Box")
+focus_neighbor_bottom = NodePath("../../Top_Hbox/ChatBot_Button")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6dyv")
+text = "Customer_Waiting"
+script = ExtResource("1_4h38q")
+
+[node name="Button" type="Button" parent="." unique_id=1682302189]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 33.0
+offset_right = 118.0
+offset_bottom = 73.0
+focus_neighbor_left = NodePath("../Button3")
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button2")
+text = "button"
+
+[node name="Button2" type="Button" parent="." unique_id=1495156699]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 95.0
+offset_right = 127.0
+offset_bottom = 135.0
+focus_neighbor_top = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button")
+text = "button2"
+
+[node name="Button3" type="Button" parent="." unique_id=860940125]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 35.0
+offset_right = 328.0
+offset_bottom = 75.0
+focus_neighbor_left = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../Button2")
+text = "button3"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

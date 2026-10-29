@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dgsxm5j4tq5vw"]
+
+[ext_resource type="Script" uid="uid://mxdap0lw4la8" path="res://button_manager.gd" id="1_8s6ts"]
+
+[node name="ButtonManager" type="Node" unique_id=963573263]
+script = ExtResource("1_8s6ts")
