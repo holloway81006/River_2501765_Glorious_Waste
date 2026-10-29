@@ -1,11 +1,24 @@
-[gd_scene format=3 uid="uid://il2sbwb5gbm5"]
+[gd_scene load_steps=11 format=3 uid="uid://il2sbwb5gbm5"]
 
-[ext_resource type="Script" uid="uid://dqn07sv15am8b" path="res://front_button.gd" id="1_8ylsf"]
+[ext_resource type="Script" path="res://front_button.gd" id="1_8ylsf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq8gr"]
-bg_color = Color(0.15487596, 0.154876, 0.15487587, 1)
+bg_color = Color(0.154876, 0.154876, 0.154876, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxbg7"]
+bg_color = Color(0.31802, 0.31802, 0.31802, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jns06"]
+bg_color = Color(0.94, 0.34075, 0.235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jhg6"]
+bg_color = Color(0.372967, 0.67, 0.201, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu624"]
+bg_color = Color(0.0666, 0.493087, 0.74, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6sqvw"]
+bg_color = Color(0.84, 0.76496, 0.2772, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f512r"]
 
@@ -13,7 +26,7 @@ bg_color = Color(0.15487596, 0.154876, 0.15487587, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4jrb"]
 
-[node name="Control" type="Control" unique_id=1984954875]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +34,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Game" type="PanelContainer" parent="." unique_id=1559780630]
+[node name="Game" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(192, 108)
 layout_mode = 1
 anchors_preset = 15
@@ -31,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mq8gr")
 
-[node name="MarginContainer" type="MarginContainer" parent="Game" unique_id=864216027]
+[node name="MarginContainer" type="MarginContainer" parent="Game"]
 layout_mode = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 30
@@ -39,13 +52,13 @@ theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 30
 metadata/_edit_lock_ = true
 
-[node name="Top_Hbox" type="HBoxContainer" parent="Game/MarginContainer" unique_id=1038024904]
+[node name="Top_Hbox" type="HBoxContainer" parent="Game/MarginContainer"]
 custom_minimum_size = Vector2(160, 540)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 20
 
-[node name="ChatBot_Button" type="Button" parent="Game/MarginContainer/Top_Hbox" unique_id=1789738078]
+[node name="ChatBot_Button" type="Button" parent="Game/MarginContainer/Top_Hbox"]
 custom_minimum_size = Vector2(1080, 300)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -54,7 +67,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_uxbg7")
 text = "ChatBot"
 script = ExtResource("1_8ylsf")
 
-[node name="MarginContainer" type="MarginContainer" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button" unique_id=1999419599]
+[node name="MarginContainer" type="MarginContainer" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button"]
 custom_minimum_size = Vector2(108, 54)
 layout_mode = 1
 anchors_preset = -1
@@ -67,35 +80,39 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer" unique_id=64876035]
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 20
 
-[node name="Button" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer" unique_id=1002215627]
+[node name="Button" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 225)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jns06")
 
-[node name="Button2" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer" unique_id=1867876399]
+[node name="Button2" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 225)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7jhg6")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer" unique_id=1881302660]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = 20
 
-[node name="Button" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer2" unique_id=1503647271]
+[node name="Button" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(200, 225)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wu624")
 
-[node name="Panel" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer2" unique_id=1314653400]
+[node name="Panel" type="Panel" parent="Game/MarginContainer/Top_Hbox/ChatBot_Button/MarginContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(200, 225)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6sqvw")
 
-[node name="Order_Box_Button" type="Button" parent="Game/MarginContainer/Top_Hbox" unique_id=1546255910]
+[node name="Order_Box_Button" type="Button" parent="Game/MarginContainer/Top_Hbox"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -104,13 +121,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_f512r")
 text = "Order_Box"
 script = ExtResource("1_8ylsf")
 
-[node name="Bottom_Hbox" type="HBoxContainer" parent="Game/MarginContainer" unique_id=149557983]
+[node name="Bottom_Hbox" type="HBoxContainer" parent="Game/MarginContainer"]
 custom_minimum_size = Vector2(170, 440)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="Customer_Waiting_Button" type="Button" parent="Game/MarginContainer/Bottom_Hbox" unique_id=740174097]
+[node name="Customer_Waiting_Button" type="Button" parent="Game/MarginContainer/Bottom_Hbox"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -119,7 +136,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_o6dyv")
 text = "Customer_Waiting"
 script = ExtResource("1_8ylsf")
 
-[node name="Customer_Prompt_Box" type="Button" parent="Game/MarginContainer/Bottom_Hbox" unique_id=205695175]
+[node name="Customer_Prompt_Box" type="Button" parent="Game/MarginContainer/Bottom_Hbox"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 3
