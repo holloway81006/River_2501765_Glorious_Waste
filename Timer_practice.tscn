@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cvgej8mvep38t"]
+
+[ext_resource type="Texture2D" uid="uid://bn0ri4s1rnp4y" path="res://icon.svg" id="1_madpq"]
+[ext_resource type="Script" uid="uid://bdnt02q65odog" path="res://Timer_practice_main.gd" id="1_xotdg"]
+
+[node name="main" type="Node2D" unique_id=189686931]
+script = ExtResource("1_xotdg")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1063295803]
+position = Vector2(667, 311)
+texture = ExtResource("1_madpq")
+
+[node name="flash_timer" type="Timer" parent="." unique_id=1851667810]
+wait_time = 10.0
+autostart = true
+
+[node name="time_remaining" type="Label" parent="." unique_id=409315804]
+offset_left = 627.0
+offset_top = 210.0
+offset_right = 752.0
+offset_bottom = 233.0
+text = "Time Remaining"
+
+[node name="Control" type="Control" parent="." unique_id=2052677023]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="timeout" from="flash_timer" to="." method="_on_flash_timer_timeout"]

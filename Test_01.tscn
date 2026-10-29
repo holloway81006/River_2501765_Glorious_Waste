@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bnioqrdbsmmh1"]
+
+[ext_resource type="PackedScene" uid="uid://bsylbnbcqccet" path="res://Drag_and_Drop.tscn" id="1_6kwf6"]
+[ext_resource type="Texture2D" uid="uid://bn0ri4s1rnp4y" path="res://icon.svg" id="2_8lbdj"]
+[ext_resource type="PackedScene" uid="uid://cvgej8mvep38t" path="res://Timer_practice.tscn" id="3_p514w"]
+
+[node name="AI_Slop" type="Node2D" unique_id=413255141]
+
+[node name="TextureRect" parent="." unique_id=346195443 instance=ExtResource("1_6kwf6")]
+offset_left = 404.0
+offset_top = 175.0
+offset_right = 524.0
+offset_bottom = 295.0
+pivot_offset = Vector2(-857, -128)
+texture = ExtResource("2_8lbdj")
+
+[node name="Cooker" parent="." unique_id=132705745 instance=ExtResource("1_6kwf6")]
+modulate = Color(1.5565991, 0, 1.4487698, 1)
+self_modulate = Color(0.81240886, 0.640835, 0.6910501, 1)
+offset_left = 910.0
+offset_top = 164.0
+offset_right = 1030.0
+offset_bottom = 284.0
+pivot_offset = Vector2(-857, -128)
+
+[node name="main" parent="." unique_id=189686931 instance=ExtResource("3_p514w")]
+
+[node name="test_timer" type="Timer" parent="." unique_id=1371349159]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="test_timer" to="TextureRect" method="_on_timer_timeout"]
