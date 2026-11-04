@@ -45,9 +45,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mq8gr")
 
 [node name="MarginContainer" type="MarginContainer" parent="Game" unique_id=490957944]
 layout_mode = 2
-theme_override_constants/margin_left = 100
+theme_override_constants/margin_left = 160
 theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 100
+theme_override_constants/margin_right = 160
 theme_override_constants/margin_bottom = 30
 metadata/_edit_lock_ = true
 
@@ -132,7 +132,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="FrontButton" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1553548635 instance=ExtResource("2_uqp01")]
+[node name="Waiting" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1553548635 instance=ExtResource("2_uqp01")]
 layout_mode = 2
 
 [node name="Customer_Prompt_Box" type="Button" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1764789658]
@@ -152,3 +152,5 @@ offset_left = 58.0
 offset_top = 53.0
 offset_right = 218.0
 offset_bottom = 106.0
+
+[connection signal="pressed" from="Game/MarginContainer/Bottom_Hbox/Customer_Prompt_Box" to="Game/MarginContainer/Top_Hbox/ChatBot_Button" method="on_pressed"]
