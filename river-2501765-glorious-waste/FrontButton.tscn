@@ -18,10 +18,10 @@ script = ExtResource("1_4h38q")
 
 [node name="Button" type="Button" parent="." unique_id=1682302189]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 33.0
-offset_right = 118.0
-offset_bottom = 73.0
+offset_left = 74.0
+offset_top = 73.0
+offset_right = 160.0
+offset_bottom = 113.0
 focus_neighbor_left = NodePath("../Button3")
 focus_neighbor_top = NodePath("../Button2")
 focus_neighbor_right = NodePath("../Button3")
@@ -30,10 +30,10 @@ text = "button"
 
 [node name="Button2" type="Button" parent="." unique_id=1495156699]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 95.0
-offset_right = 127.0
-offset_bottom = 135.0
+offset_left = 168.0
+offset_top = 210.0
+offset_right = 254.0
+offset_bottom = 250.0
 focus_neighbor_top = NodePath("../Button")
 focus_neighbor_right = NodePath("../Button3")
 focus_neighbor_bottom = NodePath("../Button")
@@ -41,10 +41,10 @@ text = "button2"
 
 [node name="Button3" type="Button" parent="." unique_id=860940125]
 layout_mode = 0
-offset_left = 242.0
-offset_top = 35.0
-offset_right = 328.0
-offset_bottom = 75.0
+offset_left = 278.0
+offset_top = 69.0
+offset_right = 364.0
+offset_bottom = 109.0
 focus_neighbor_left = NodePath("../Button")
 focus_neighbor_right = NodePath("../Button")
 focus_neighbor_bottom = NodePath("../Button2")

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://il2sbwb5gbm5"]
 
 [ext_resource type="Script" uid="uid://dqn07sv15am8b" path="res://front_button.gd" id="1_8ylsf"]
-[ext_resource type="PackedScene" uid="uid://cg0t2h6jt1iig" path="res://FrontButton.tscn" id="2_uqp01"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq8gr"]
 bg_color = Color(0.154876, 0.154876, 0.154876, 1)
@@ -23,7 +22,7 @@ bg_color = Color(0.84, 0.76496, 0.2772, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f512r"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4jrb"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6dyv"]
 
 [node name="Control" type="Control" unique_id=854460339]
 layout_mode = 3
@@ -118,9 +117,7 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_neighbor_left = NodePath("../ChatBot_Button")
-focus_neighbor_top = NodePath("../../Bottom_Hbox/Customer_Prompt_Box")
 focus_neighbor_right = NodePath("../ChatBot_Button")
-focus_neighbor_bottom = NodePath("../../Bottom_Hbox/Customer_Prompt_Box")
 theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_f512r")
 text = "Order_Box"
@@ -132,25 +129,96 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="Waiting" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1553548635 instance=ExtResource("2_uqp01")]
-layout_mode = 2
-
-[node name="Customer_Prompt_Box" type="Button" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1764789658]
+[node name="Waiting" type="Button" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1553548635]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 3
-focus_neighbor_top = NodePath("../../Top_Hbox/Order_Box_Button")
-focus_neighbor_bottom = NodePath("../../Top_Hbox/Order_Box_Button")
-theme_override_font_sizes/font_size = 51
-theme_override_styles/normal = SubResource("StyleBoxFlat_w4jrb")
-text = "Customer_Promts"
+focus_neighbor_top = NodePath("../../Top_Hbox/ChatBot_Button")
+focus_neighbor_bottom = NodePath("../../Top_Hbox/ChatBot_Button")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6dyv")
+text = "Customer_Waiting"
 script = ExtResource("1_8ylsf")
 
-[node name="Button" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Customer_Prompt_Box" unique_id=1931264381]
+[node name="Button" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Waiting" unique_id=1682302189]
 layout_mode = 0
-offset_left = 58.0
-offset_top = 53.0
-offset_right = 218.0
-offset_bottom = 106.0
+offset_left = 74.0
+offset_top = 73.0
+offset_right = 160.0
+offset_bottom = 113.0
+focus_neighbor_left = NodePath("../Button3")
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button2")
+text = "button"
 
-[connection signal="pressed" from="Game/MarginContainer/Bottom_Hbox/Customer_Prompt_Box" to="Game/MarginContainer/Top_Hbox/ChatBot_Button" method="on_pressed"]
+[node name="Button2" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Waiting" unique_id=1495156699]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 76.0
+offset_right = 370.0
+offset_bottom = 116.0
+focus_neighbor_top = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button")
+text = "button2"
+
+[node name="Button3" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Waiting" unique_id=860940125]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 68.0
+offset_right = 577.0
+offset_bottom = 108.0
+focus_neighbor_left = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../Button2")
+text = "button3"
+
+[node name="Waiting2" type="Button" parent="Game/MarginContainer/Bottom_Hbox" unique_id=1042482284]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../Top_Hbox/ChatBot_Button")
+focus_neighbor_bottom = NodePath("../../Top_Hbox/ChatBot_Button")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6dyv")
+text = "Customer_Waiting"
+script = ExtResource("1_8ylsf")
+
+[node name="Button" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Waiting2" unique_id=717566768]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 310.0
+offset_right = 158.0
+offset_bottom = 350.0
+focus_neighbor_left = NodePath("../Button3")
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button2")
+text = "customer
+"
+
+[node name="Button2" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Waiting2" unique_id=1825027183]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 316.0
+offset_right = 294.0
+offset_bottom = 356.0
+focus_neighbor_top = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button")
+text = "button2"
+
+[node name="Button3" type="Button" parent="Game/MarginContainer/Bottom_Hbox/Waiting2" unique_id=1743292629]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 327.0
+offset_right = 401.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../Button2")
+text = "button3"
+
+[connection signal="pressed" from="Game/MarginContainer/Bottom_Hbox/Waiting" to="Game/MarginContainer/Bottom_Hbox/Waiting" method="_on_pressed"]
+[connection signal="pressed" from="Game/MarginContainer/Bottom_Hbox/Waiting2" to="Game/MarginContainer/Bottom_Hbox/Waiting2" method="_on_pressed"]
